@@ -1,0 +1,17 @@
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\bin\Debug\net6.0\SolarSystem.Infrastructure.deps.json
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\bin\Debug\net6.0\SolarSystem.Infrastructure.runtimeconfig.json
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\bin\Debug\net6.0\SolarSystem.Infrastructure.dll
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\bin\Debug\net6.0\SolarSystem.Infrastructure.pdb
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\bin\Debug\net6.0\SolarSystem.Domain.dll
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\bin\Debug\net6.0\SolarSystem.Domain.pdb
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.AssemblyInfo.cs
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.csproj.CopyComplete
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.dll
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\refint\SolarSystem.Infrastructure.dll
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.pdb
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\SolarSystem.Infrastructure.genruntimeconfig.cache
+C:\Dev\inc-tech\Backend\SolarSystem.Backend\SolarSystem.Infrastructure\obj\Debug\net6.0\ref\SolarSystem.Infrastructure.dll

@@ -6,9 +6,9 @@ namespace SolarSystem.Domain.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public int DistanceFromSun { get; set; }
-        public int Diameter { get; set; }
+        public double Diameter { get; set; }
+        public double DistanceFromSun { get; set; }
         public string ImageURL { get; set; } = string.Empty;
-        public int Mass { get; set; }
+        public double Mass { get; set; }
     }
 }

@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Backend/SolarSystem.Backend/SolarSystem.API/bin/
+/Backend/SolarSystem.Backend/SolarSystem.Infrastructure/bin/
+/Backend/SolarSystem.Backend/SolarSystem.Domain/bin/

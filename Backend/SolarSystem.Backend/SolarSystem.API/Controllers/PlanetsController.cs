@@ -9,12 +9,10 @@ namespace SolarSystem.API.Controllers
     [ApiController]
     public class PlanetsController : ControllerBase
     {
-        private readonly SolarSystemContext _context;
         private readonly IPlanetService _planetService;
 
-        public PlanetsController(SolarSystemContext context, IPlanetService planetService)
+        public PlanetsController(IPlanetService planetService)
         {
-            _context = context;
             _planetService = planetService;
         }
 

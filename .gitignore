@@ -2,19 +2,16 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Backend/SolarSystem.Backend/SolarSystem.API/bin/
-/Backend/SolarSystem.Backend/SolarSystem.Infrastructure/bin/
-/Backend/SolarSystem.Backend/SolarSystem.Domain/bin/
-/Backend/SolarSystem.Backend/SolarSystem.API/obj/
-/Backend/SolarSystem.Backend/SolarSystem.Infrastructure/obj/
-/Backend/SolarSystem.Backend/SolarSystem.Domain/obj/
-/Backend/SolarSystem.Backend/.vs/
+# Ignore bin and obj folders in all directories
+**/[Bb]in/
+**/[Oo]bj/
+
+# Ignore .vs directories
+**/.vs/
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
 *.[Cc]ache
-# but keep track of directories ending in .cache
-!?*.[Cc]ache/
 
 # NuGet Packages
 *.nupkg
@@ -24,8 +21,6 @@
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
-# Uncomment if necessary however generally it will be regenerated when needed
-#!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
 *.nuget.props
 *.nuget.targets
@@ -61,8 +56,9 @@
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+
+# Ignore all debug generated files
+**/obj/Debug/
+
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
-/Backend/SolarSystem.Backend/SolarSystem.API/obj/Debug/net6.0/project.razor.json
-/Backend/SolarSystem.Backend/SolarSystem.API/obj/Debug/net6.0/SolarSystem.API.csproj.AssemblyReference.cache
-/Backend/SolarSystem.Backend/SolarSystem.Infrastructure/obj/Debug/net6.0/SolarSystem.Infrastructure.csproj.AssemblyReference.cache

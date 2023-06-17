@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SolarSystem.Domain.Interfaces;
-using SolarSystem.Infrastructure.Data;
-using SolarSystem.Infrastructure.Services;
 
 namespace SolarSystem.API.Controllers
 {

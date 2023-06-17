@@ -1,8 +1,7 @@
-import "./App.css";
 import PlanetDetail from "./components/PlanetDetail";
 import PlanetsList from "./components/PlanetList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import "./App.css";
 
 function App() {
   return (

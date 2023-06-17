@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
-import {Link} from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { Link, useParams } from "react-router-dom";
 import axios from 'axios'
 
 const PlanetDetail = () => {
@@ -14,8 +13,8 @@ const PlanetDetail = () => {
                 setPlanet(response.data)
             })
     }, [id])
-
-  return (
+    
+    return (
     <main>
         <header>
             <h1>{planet.name}</h1>
@@ -37,7 +36,6 @@ const PlanetDetail = () => {
         <nav>
             <Link to="/">Back Home</Link>
         </nav>
-
     </main>
   )
 }

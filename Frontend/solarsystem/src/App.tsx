@@ -1,6 +1,6 @@
-import PlanetDetail from "./components/PlanetDetail.tsx";
-import PlanetsList from "./components/PlanetList.tsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PlanetDetail from "./components/PlanetDetail";
+import PlanetsList from "./components/PlanetList";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 function App() {

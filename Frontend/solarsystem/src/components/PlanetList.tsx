@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import Planet from "../interfaces/Planet";
+import { fetchPlanets } from "../api/api";
 
 const PlanetsList = () => {
   const [planets, setPlanets] = useState<Planet[]>([]);
 
   useEffect(() => {
-    axios
-      .get("https://localhost:7292/api/Planets")
-      .then((response) => {
-        setPlanets(response.data);
-      })
-      .catch((error) =>
-        console.error(
-          `There was an error retrieving the list of planets: ${error}`
-        )
-      );
+    async function getPlanets() {
+      const response = await fetchPlanets();
+      setPlanets(response);
+    }
+    getPlanets();
   }, []);
+
 
   return (
     <main>
       <header>
-        <h1 style={{ color: "white" }}>Names of Planets</h1>
+        <h2 style={{ color: "black" }}>Click on a Planet's name to see more info</h2>
       </header>
 
       <section>

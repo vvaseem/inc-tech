@@ -17,7 +17,6 @@ export const usePlanets = () => {
         if (error instanceof Error) {
           setError(error.message);
         }
-        
       } finally {
         setLoading(false);
       }

@@ -10,3 +10,13 @@ export const fetchPlanets = async () => {
     throw error;
   }
 };
+
+export const fetchPlanet = async (id: number) => {
+  try {
+    const response = await axios.get<Planet>(`https://localhost:7292/api/Planets/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(`There was an error retrieving the planet: ${error}`);
+    throw error;
+  }
+}

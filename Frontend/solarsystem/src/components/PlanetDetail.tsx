@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
 import Planet from "../interfaces/Planet";
+import { fetchPlanet } from "../api/api";
 
 const PlanetDetail = () => {
   const { id } = useParams();
   const [planet, setPlanet] = useState<Planet>({} as Planet);
 
   useEffect(() => {
-    axios.get(`https://localhost:7292/api/Planets/${id}`).then((response) => {
-      setPlanet(response.data);
-    });
-  }, [id]);
+    async function getPlanet() {
+      const response = await fetchPlanet(Number(id));
+      setPlanet(response);
+    }
+    
+    getPlanet();
+  }
+  , [id]);
 
   return (
     <main>

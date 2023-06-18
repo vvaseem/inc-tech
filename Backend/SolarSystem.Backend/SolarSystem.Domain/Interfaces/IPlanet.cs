@@ -6,7 +6,7 @@
         string Name { get; set; }
         double Diameter { get; set; }
         double DistanceFromSun { get; set; }
-        string ImageURL { get; set; }
+        string Image { get; set; }
         double Mass { get; set; }
     }
 }

@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Planet from "../interfaces/Planet";
 
 const PlanetsList = () => {
-  const [planets, setPlanets] = useState([]);
+  const [planets, setPlanets] = useState<Planet[]>([]);
 
   useEffect(() => {
     axios

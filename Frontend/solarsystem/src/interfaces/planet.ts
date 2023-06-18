@@ -3,6 +3,6 @@ export default interface Planet {
     name: string;
     diameter: number;
     distanceFromSun: number;
-    imageUrl: string;
+    image: string;
     mass: number;
 }

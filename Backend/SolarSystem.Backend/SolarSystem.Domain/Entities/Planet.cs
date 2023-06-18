@@ -8,7 +8,7 @@ namespace SolarSystem.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public double Diameter { get; set; }
         public double DistanceFromSun { get; set; }
-        public string ImageURL { get; set; } = string.Empty;
+        public string Image { get; set; } = string.Empty;
         public double Mass { get; set; }
     }
 }

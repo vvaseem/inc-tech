@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import Planet from "../interfaces/Planet";
 
 const PlanetDetail = () => {
   const { id } = useParams();
-  const [planet, setPlanet] = useState([]);
+  const [planet, setPlanet] = useState<Planet>({} as Planet);
 
   useEffect(() => {
     axios.get(`https://localhost:7292/api/Planets/${id}`).then((response) => {
@@ -20,7 +21,7 @@ const PlanetDetail = () => {
 
       <section>
         <figure>
-          <img src={planet.imageURL} alt={planet.name} />
+          <img src={planet.image} alt={planet.name} />
           <figcaption>Surface of {planet.name}</figcaption>
         </figure>
 

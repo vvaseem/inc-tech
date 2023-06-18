@@ -1,26 +1,25 @@
 ﻿using SolarSystem.Domain.Interfaces;
-using SolarSystem.Infrastructure.Data;
 
 namespace SolarSystem.Infrastructure.Services
 {
     public class PlanetService : IPlanetService
     {
-        private readonly SolarSystemContext _context;
+        private readonly IPlanetRepository _planetRepository;
 
-        public PlanetService(SolarSystemContext context)
+        public PlanetService(IPlanetRepository planetRepository)
         {
-            _context = context;
+            _planetRepository = planetRepository;
         }
 
         public IEnumerable<IPlanet> GetAll()
         {
-            var results = _context.Planets;
+            var results = _planetRepository.GetAll();
             return results;
         }
 
         public IPlanet? GetById(int id)
         {
-            var result = _context.Planets.Find(id);
+            var result = _planetRepository.GetById(id);
             return result;
         }
     }

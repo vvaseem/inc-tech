@@ -6,7 +6,8 @@ using SolarSystem.Infrastructure.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<SolarSystemContext>(options => options.UseInMemoryDatabase("SolarSystemContext"));
-builder.Services.AddTransient<IPlanetService, PlanetService>();
+builder.Services.AddScoped<IPlanetRepository, PlanetRepository>();
+builder.Services.AddScoped<IPlanetService, PlanetService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

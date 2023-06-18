@@ -18,7 +18,6 @@ namespace SolarSystem.API.Controllers
         public async Task<IActionResult> Get()
         {
             var results = await _planetService.GetAll();
-
             if (results == null)
                 return NotFound();
 
@@ -29,12 +28,9 @@ namespace SolarSystem.API.Controllers
         public async Task<IActionResult> Get(int id)
         {
             if (id <= 0)
-            {
                 return BadRequest("Id must be a positive number");
-            }
 
             var result = await _planetService.GetById(id);
-
             if (result == null)
                 return NotFound();
 

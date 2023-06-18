@@ -8,5 +8,7 @@
         double DistanceFromSun { get; set; }
         string Image { get; set; }
         double Mass { get; set; }
+
+        double CalculateSurfaceArea();
     }
 }

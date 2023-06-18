@@ -18,6 +18,10 @@ namespace SolarSystem.API.Controllers
         public IActionResult Get()
         {
             var results = _planetService.GetAll();
+
+            if (results == null)
+                return NotFound();
+
             return Ok(results);
         }
 
@@ -25,6 +29,10 @@ namespace SolarSystem.API.Controllers
         public IActionResult Get(int id)
         {
             var result = _planetService.GetById(id);
+
+            if (result == null)
+                return NotFound();
+
             return Ok(result);
         }
     }

@@ -1,20 +1,9 @@
-import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Planet from "../interfaces/Planet";
-import { fetchPlanet } from "../api/api";
+import { usePlanet } from '../hooks/usePlanet';
 
 const PlanetDetail = () => {
-  const { id } = useParams();
-  const [planet, setPlanet] = useState<Planet>({} as Planet);
-
-  useEffect(() => {
-    async function getPlanet() {
-      const response = await fetchPlanet(Number(id));
-      setPlanet(response);
-    }
-
-    getPlanet();
-  }, [id]);
+  const { id } = useParams<{ id: string }>();
+  const { planet } = usePlanet(Number(id));
 
   return (
     <main>

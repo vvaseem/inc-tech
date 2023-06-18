@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { usePlanets } from '../hooks/usePlanets';
+import "../App.css"
 
 const PlanetsList = () => {
   const { planets, loading } = usePlanets();
@@ -7,7 +8,7 @@ const PlanetsList = () => {
   return (
     <main>
       <header>
-        <h2 style={{ color: "black" }}>
+        <h2 className="planet-list-header">
           {
             loading ? "Loading..." : `Click on a Planet to learn more about it!`
           }
@@ -16,7 +17,7 @@ const PlanetsList = () => {
 
       <section>
         {planets.map((planet, index) => (
-          <div key={planet.id} style={{ margin: "0.5rem" }}>
+          <div key={planet.id} className="planet-list-item">
             <Link to={`/planet/${planet.id}`} aria-label={`Link to details about ${planet.name}`}>{planet.name}</Link>
           </div>
           

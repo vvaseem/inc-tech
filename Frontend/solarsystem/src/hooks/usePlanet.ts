@@ -4,23 +4,22 @@ import { fetchPlanet } from "../api/api";
 
 export const usePlanet = (id: number) => {
   const [planet, setPlanet] = useState<Planet>({} as Planet);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function getPlanet() {
+      setLoading(true);
       try {
         const response = await fetchPlanet(id);
-        // Include type guard here based on the shape of your Planet object
-        if (response && 'id' in response && 'name' in response /* include all needed properties here */) {
-          setPlanet(response);
-        } else {
-          throw new Error('Invalid response');
-        }
+        setPlanet(response);
       } catch (error) {
         console.error(error);
+      } finally {
+        setLoading(false);
       }
     }
     getPlanet();
   }, [id]);
 
-  return { planet };
+  return { planet, loading };
 };

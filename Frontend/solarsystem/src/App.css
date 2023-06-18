@@ -25,3 +25,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.planet-list-header {
+  color: black;
+}
+
+.planet-list-item {
+  margin: 10px;
+}

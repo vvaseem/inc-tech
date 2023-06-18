@@ -1,21 +1,8 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Planet from "../interfaces/Planet";
-import { fetchPlanets } from "../api/api";
+import { usePlanets } from '../hooks/usePlanets';
 
 const PlanetsList = () => {
-  const [planets, setPlanets] = useState<Planet[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    async function getPlanets() {
-      setLoading(true);
-      const response = await fetchPlanets();
-      setPlanets(response);
-      setLoading(false);
-    }
-    getPlanets();
-  }, []);
+  const { planets, loading } = usePlanets();
 
   return (
     <main>

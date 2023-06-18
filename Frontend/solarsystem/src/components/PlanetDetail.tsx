@@ -12,10 +12,9 @@ const PlanetDetail = () => {
       const response = await fetchPlanet(Number(id));
       setPlanet(response);
     }
-    
+
     getPlanet();
-  }
-  , [id]);
+  }, [id]);
 
   return (
     <main>

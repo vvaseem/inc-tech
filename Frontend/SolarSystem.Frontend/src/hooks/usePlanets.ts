@@ -5,6 +5,7 @@ import { fetchPlanets } from "../api/api";
 export const usePlanets = () => {
   const [planets, setPlanets] = useState<Planet[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     async function getPlanets() {
@@ -13,7 +14,10 @@ export const usePlanets = () => {
         const response = await fetchPlanets();
         setPlanets(response);
       } catch (error) {
-        console.error(error);
+        if (error instanceof Error) {
+          setError(error.message);
+        }
+        
       } finally {
         setLoading(false);
       }
@@ -21,5 +25,5 @@ export const usePlanets = () => {
     getPlanets();
   }, []);
 
-  return { planets, loading };
+  return { planets, loading, error };
 };

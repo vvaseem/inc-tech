@@ -1,4 +1,5 @@
-﻿using SolarSystem.Domain.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using SolarSystem.Domain.Interfaces;
 
 namespace SolarSystem.Infrastructure.Data
 {
@@ -11,14 +12,14 @@ namespace SolarSystem.Infrastructure.Data
             _context = context;
         }
 
-        public IEnumerable<IPlanet> GetAll()
+        public async Task<IEnumerable<IPlanet>> GetAll()
         {
-            return _context.Planets.ToList();
+            return await _context.Planets.ToListAsync();
         }
 
-        public IPlanet GetById(int id)
+        public async Task<IPlanet> GetById(int id)
         {
-            return _context.Planets.Find(id);
+            return await _context.Planets.FindAsync(id);
         }
     }
 }

@@ -3,14 +3,26 @@ import { usePlanet } from '../hooks/usePlanet';
 
 const PlanetDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const { planet, loading } = usePlanet(Number(id));
+  const { planet, loading, error} = usePlanet(Number(id));
 
   if (!Number(id)) {
     return <p>Invalid ID parameter. It should be a number.</p>;
   }
 
+  if (Number(id) < 1 ) {
+    return <p>Invalid ID parameter. It should be a positive number.</p>;
+  }
+
   if (loading) {
     return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  if (!loading && !planet) {
+    return <p>Planet not found.</p>;
   }
 
   return (

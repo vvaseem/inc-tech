@@ -3,7 +3,15 @@ import { usePlanets } from '../hooks/usePlanets';
 import "../App.css"
 
 const PlanetsList = () => {
-  const { planets, loading } = usePlanets();
+  const { planets, loading, error } = usePlanets();
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  if (!loading && planets.length === 0) {
+    return <p>No planets found.</p>;
+  }
 
   return (
     <main>

@@ -23,28 +23,28 @@ namespace SolarSystem.Infrastructure.Tests
         {
             // Arrange
             var expectedPlanet = new Planet { Id = 1, Name = "Mercury" };
-            _planetRepositoryMock.Setup(x => x.GetById(It.IsAny<int>())).Returns(expectedPlanet);
+            _planetRepositoryMock.Setup(x => x.GetByIdAsync(It.IsAny<int>())).Returns(expectedPlanet);
 
             // Act
             var result = _planetService.GetById(1);
 
             // Assert
             result.Name.Should().Be(expectedPlanet.Name);
-            _planetRepositoryMock.Verify(x => x.GetById(1), Times.Once);
+            _planetRepositoryMock.Verify(x => x.GetByIdAsync(1), Times.Once);
         }
 
         [Test]
         public void GetById_WhenPlanetDoesNotExist_ReturnsNull()
         {
             // Arrange
-            _planetRepositoryMock.Setup(x => x.GetById(It.IsAny<int>())).Returns((Planet)null);
+            _planetRepositoryMock.Setup(x => x.GetByIdAsync(It.IsAny<int>())).Returns((Planet)null);
 
             // Act
             var result = _planetService.GetById(2);
 
             // Assert
             result.Should().BeNull();
-            _planetRepositoryMock.Verify(x => x.GetById(2), Times.Once);
+            _planetRepositoryMock.Verify(x => x.GetByIdAsync(2), Times.Once);
         }
 
         [Test]
@@ -62,14 +62,14 @@ namespace SolarSystem.Infrastructure.Tests
             new Planet { Id = 7, Name = "Uranus" },
             new Planet { Id = 8, Name = "Neptune" }
         };
-            _planetRepositoryMock.Setup(x => x.GetAll()).Returns(expectedPlanets);
+            _planetRepositoryMock.Setup(x => x.GetAllAsync()).Returns(expectedPlanets);
 
             // Act
             var result = _planetService.GetAll();
 
             // Assert
             result.Should().BeEquivalentTo(expectedPlanets);
-            _planetRepositoryMock.Verify(x => x.GetAll(), Times.Once);
+            _planetRepositoryMock.Verify(x => x.GetAllAsync(), Times.Once);
         }
     }
 }

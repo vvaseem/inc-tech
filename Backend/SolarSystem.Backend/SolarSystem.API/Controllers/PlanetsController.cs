@@ -15,9 +15,9 @@ namespace SolarSystem.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var results = _planetService.GetAll();
+            var results = await _planetService.GetAll();
 
             if (results == null)
                 return NotFound();
@@ -26,9 +26,14 @@ namespace SolarSystem.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var result = _planetService.GetById(id);
+            if (id <= 0)
+            {
+                return BadRequest("Id must be a positive number");
+            }
+
+            var result = await _planetService.GetById(id);
 
             if (result == null)
                 return NotFound();

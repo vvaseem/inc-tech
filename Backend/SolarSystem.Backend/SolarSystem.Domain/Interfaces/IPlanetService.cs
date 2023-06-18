@@ -4,8 +4,8 @@ namespace SolarSystem.Domain.Interfaces
 {
     public interface IPlanetService
     {
-        IEnumerable<IPlanet> GetAll();
+        Task<IEnumerable<IPlanet>> GetAll();
 
-        IPlanet? GetById(int id);
+        Task<IPlanet?> GetById(int id);
     }
 }

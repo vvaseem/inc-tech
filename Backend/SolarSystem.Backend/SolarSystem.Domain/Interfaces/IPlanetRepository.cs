@@ -2,8 +2,7 @@
 {
     public interface IPlanetRepository
     {
-        IEnumerable<IPlanet> GetAll();
-
-        IPlanet GetById(int id);
+        Task<IEnumerable<IPlanet>> GetAll();
+        Task<IPlanet> GetById(int id);
     }
 }

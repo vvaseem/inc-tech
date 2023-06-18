@@ -11,15 +11,15 @@ namespace SolarSystem.Infrastructure.Services
             _planetRepository = planetRepository;
         }
 
-        public IEnumerable<IPlanet> GetAll()
+        public async Task<IEnumerable<IPlanet>> GetAll()
         {
-            var results = _planetRepository.GetAll();
+            var results = await _planetRepository.GetAll();
             return results;
         }
 
-        public IPlanet? GetById(int id)
+        public async Task<IPlanet?> GetById(int id)
         {
-            var result = _planetRepository.GetById(id);
+            var result = await _planetRepository.GetById(id);
             return result;
         }
     }

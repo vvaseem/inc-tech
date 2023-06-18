@@ -13,7 +13,7 @@ const PlanetDetail = () => {
     return <p key="not-found">Planet not found.</p>;
   }
 
-  if (!Number.isNaN(id) || Number(id) < 1) {
+  if (Number(id) < 1 || isNaN(Number(id))) {
     return (
       <p key="invalid-id">
         Invalid ID parameter. It should be a positive number.

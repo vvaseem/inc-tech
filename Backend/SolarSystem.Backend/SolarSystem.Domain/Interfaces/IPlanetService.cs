@@ -1,6 +1,4 @@
-﻿using SolarSystem.Domain.Entities;
-
-namespace SolarSystem.Domain.Interfaces
+﻿namespace SolarSystem.Domain.Interfaces
 {
     public interface IPlanetService
     {

@@ -10,9 +10,10 @@ namespace SolarSystem.Domain.Entities
         public double DistanceFromSun { get; set; }
         public string Image { get; set; } = string.Empty;
         public double Mass { get; set; }
+
         public double CalculateSurfaceArea()
         {
-            double radius = Diameter / 2.0; // Convert diameter to radius
+            double radius = Diameter / 2.0;
             return 4 * Math.PI * Math.Pow(radius, 2);
         }
     }

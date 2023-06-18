@@ -1,28 +1,28 @@
 import { Link, useParams } from "react-router-dom";
-import { usePlanet } from '../hooks/usePlanet';
+import { usePlanet } from "../hooks/usePlanet";
 
 const PlanetDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const { planet, loading, error} = usePlanet(Number(id));
-
-  if (!Number(id)) {
-    return <p>Invalid ID parameter. It should be a number.</p>;
-  }
-
-  if (Number(id) < 1 ) {
-    return <p>Invalid ID parameter. It should be a positive number.</p>;
-  }
+  const { planet, loading, error } = usePlanet(Number(id));
 
   if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>Error: {error}</p>;
+    return <p key="loading">Loading...</p>;
   }
 
   if (!loading && !planet) {
-    return <p>Planet not found.</p>;
+    return <p key="not-found">Planet not found.</p>;
+  }
+
+  if (!Number.isNaN(id) || Number(id) < 1) {
+    return (
+      <p key="invalid-id">
+        Invalid ID parameter. It should be a positive number.
+      </p>
+    );
+  }
+
+  if (error) {
+    return <p key="error">Error: {error}</p>;
   }
 
   return (

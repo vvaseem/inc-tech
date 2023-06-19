@@ -29,12 +29,6 @@ dotnet run
 
 You should see output indicating the API has started, typically listening on http://localhost:7292.
 
-# Run the Frontend
-
-The React application is located in the \Frontend\SolarSystem.Frontend directory. Open a new terminal window and navigate to this directory:
-
-cd /Frontend/SolarSystem.Frontend
-
 # Install the necessary node modules:
 
 npm install
@@ -44,3 +38,9 @@ Then, you can start the React application with:
 npm start
 
 The application should now be running and accessible at http://localhost:3000.
+
+# Run the Frontend
+
+The React application is located in the \Frontend\SolarSystem.Frontend directory. Open a new terminal window and navigate to this directory:
+
+cd /Frontend/SolarSystem.Frontend
